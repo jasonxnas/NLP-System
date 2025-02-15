@@ -18,7 +18,7 @@ This is a chat bot built with React.js, Node.js and Express.js, integrated with 
 - Fully customizable/tweakable
 
 ## Example
-![Image 2023-11-10 at 3 30 PM](https://github.com/tyleroneil72/react-chat-bot/assets/43754564/9eb22eb0-b6a5-4334-8239-488e022c35d2)
+![Image 2023-11-10 at 3 30 PM](https://github.com/jasonxnas/NLP-System/assets/43754564/9eb22eb0-b6a5-4334-8239-488e022c35d2)
 
 
 ## Installation
@@ -26,7 +26,7 @@ This is a chat bot built with React.js, Node.js and Express.js, integrated with 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/tyleroneil72/react-chat-bot.git
+git clone https://github.com/jasonxnas/NLP-System.git
 cd react-chat-bot
 ```
 
