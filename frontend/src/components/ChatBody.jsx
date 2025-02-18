@@ -17,12 +17,18 @@ const ChatBody = ({
   }, [chatMessages]);
 
   return (
-    <div className='chat-body' id='chat-body' ref={chatBodyRef}>
-      {/* Render Message component for each message in chatMessages*/}
+    <div className="chat-body" id="chat-body" ref={chatBodyRef}>
       {chatMessages.map((chat, index) => (
-        <Message key={index} message={chat.message} type={chat.type} />
+        <Message
+          key={index}
+          message={chat.message}
+          type={chat.type}
+          isLast={
+            index === chatMessages.length - 1 ||
+            chatMessages[index + 1]?.type !== chat.type
+          }
+        />
       ))}
-      {/* If isChatbotTyping is true, it renders a TypingIndicator component */}
       {isChatbotTyping && (
         <TypingIndicator typingIndicatorMessage={typingIndicatorMessage} />
       )}

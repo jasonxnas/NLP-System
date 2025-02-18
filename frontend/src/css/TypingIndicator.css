@@ -1,10 +1,46 @@
 .typing-indicator {
-    background-color: var(--third-colour);
-    color: #fff;
-    padding: 8px;
-    border-radius: 4px;
-    margin: 5px;
-    clear: both;
-    float: left;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 8px 14px;
+  background-color: #e5e5ea; /* iMessage gray */
+  border-radius: 18px;
+  max-width: fit-content;
+  height: 12px;
 }
-  
+
+@keyframes typing {
+  0% {
+    opacity: 0.3;
+    transform: translateY(0px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-4px);
+  } /* Slightly higher bounce */
+  100% {
+    opacity: 0.3;
+    transform: translateY(0px);
+  }
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background-color: #8e8e93; /* Darker gray dots */
+  border-radius: 50%;
+  animation: typing 0.9s infinite ease-in-out; /* Faster animation */
+}
+
+.dot:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.15s; /* Shorter delay for smoother transition */
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.3s;
+}

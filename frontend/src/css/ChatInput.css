@@ -1,24 +1,49 @@
+:root {
+  --footer-bg: #f1f1f1; /* Light mode footer background */
+  --input-bg: white; /* Light mode input background */
+  --input-text: black; /* Light mode input text color */
+  --input-border: #ccc; /* Light mode input border */
+}
+
+.dark-mode {
+  --footer-bg: #1e1e1e; /* Dark mode footer background */
+  --input-bg: #1e1e1e; /* Dark mode input background */
+  --input-text: white; /* Dark mode input text color */
+  --input-border: #333; /* Dark mode input border */
+}
+
+/* Chat Footer */
 .chat-footer {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    background-color: #f1f1f1;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--footer-bg); /* Dynamically changes based on theme */
+  border-radius: 25px;
 }
-  
-.chat-footer input[type='text'] {
-    flex: 1;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-right: 5px;
+
+.chat-footer input[type="text"] {
+  font-size: 18px;
+  flex: 1;
+  padding: 8px;
+  background-color: var(--input-bg); /* Dynamically changes based on theme */
+  color: var(--input-text); /* Dynamically changes based on theme */
+  border: 1px solid var(--input-border); /* Dynamically changes based on theme */
+  border-radius: 25px;
+  margin-right: 5px;
 }
-  
+
 #send-button {
-    background-color: var(--third-colour);
-    color: #fff;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+  font-size: 18px;
+  background-color: var(--third-colour);
+  color: #fff;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
 }
-  
+
+.chat-footer,
+.chat-footer input[type="text"] {
+  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out,
+    border 0.4s ease-in-out;
+}
