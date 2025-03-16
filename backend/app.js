@@ -5,7 +5,7 @@ const path = require("path");
 const { exec } = require("child_process");
 const routes = require("./routes");
 const dotenv = require("dotenv");
-dotenv.config({ path: "../.env" });
+dotenv.config();
 
 const app = express();
 const BACKEND_PORT = process.env.EXPRESS_PORT; // This is the port that the backend server will run on
