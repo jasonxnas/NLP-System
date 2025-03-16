@@ -11,7 +11,7 @@ const Chat = () => {
     useState("Typing");
   const [darkMode, setDarkMode] = useState(false); // 🔹 Added dark mode state
 
-  const EXPRESS_PORT = 3000;
+const API_BASE_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:3000";
   const firstRender = useRef(true);
 
   const toggleDarkMode = () => {
@@ -62,7 +62,7 @@ const Chat = () => {
     displayTypingIndicator();
 
     try {
-      const response = await fetch(`http://127.0.0.1:${EXPRESS_PORT}/message`, {
+const response = await fetch(`${API_BASE_URL}/message`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: userInput }),
