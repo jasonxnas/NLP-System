@@ -1,7 +1,7 @@
-const OpenAI = require("openai");
+const { OpenAI } = require("openai"); // Correct import for OpenAI v4
 const dotenv = require("dotenv");
 
-dotenv.config(); // No path needed for Render
+dotenv.config(); // No need to specify a path for Render
 
 // OpenAI API Key
 const openai = new OpenAI({
@@ -9,7 +9,7 @@ const openai = new OpenAI({
 });
 
 // Model used for chatbot (e.g., gpt-4, gpt-3.5-turbo)
-const gptModel = process.env.MODEL || "gpt-4"; // Default to gpt-4 if MODEL is not set
+const gptModel = process.env.MODEL || "gpt-4"; // Default to gpt-4
 
 // Function to call GPT
 async function callGPT(promptContent, systemContent, previousChat) {
