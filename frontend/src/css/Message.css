@@ -30,7 +30,7 @@ body,
 
 /* USER (Right-Side Messages) */
 .user-message {
-  background: linear-gradient(to bottom, #00d0ea 0%, #0085d1 100%);
+  background: #0085d1;
   color: white;
   align-self: flex-end; /* Moves to the right */
 }
@@ -51,7 +51,7 @@ body,
   right: -8px;
   height: 20px;
   width: 20px;
-  background: linear-gradient(to bottom, #00d0ea 0%, #0085d1 100%);
+  background: #0085d1;
   border-bottom-left-radius: 20px;
 }
 
