@@ -1,7 +1,7 @@
 :root {
-  --main-colour: #4592ae;
+  --main-colour: #0085d1;
   --secondary-colour: #e0e1dd;
-  --third-colour: #4592ae;
+  --third-colour: #0085d1;
 }
 
 body {
@@ -24,7 +24,7 @@ body {
 }
 
 .chat-title {
-  background-color: #4592ae;
+  background-color: #0085d1;
   display: flex;
   align-items: center; /* Align items vertically */
   justify-content: center; /* Center items horizontally */
