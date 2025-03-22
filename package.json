@@ -18,7 +18,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
-  "author": "Tyler O'Neil",
+  "author": "",
   "license": "MIT",
   "devDependencies": {
     "@types/react": "^18.2.15",
