@@ -1,21 +1,102 @@
+:root {
+  --user-tail-color: white; /* Default for light mode */
+  --chatbot-tail-color: white; /* Default for light mode */
+}
+
+.dark-mode {
+  --user-tail-color: #1e1e1e; /* Dark mode color */
+  --chatbot-tail-color: #1e1e1e; /* Dark mode color */
+}
+
+/* Smooth transition for Dark Mode */
+body,
+.chat-container,
+.user-message.last::after,
+.chatbot-message.last::after {
+  transition: background-color 0.4s ease-in-out;
+}
+
+/* Rest of your CSS remains the same */
+
 .user-message,
 .chatbot-message {
-  margin: 5px;
-  padding: 8px;
-  width: fit-content;
-  max-width: 490px;
-  clear: both;
+  padding: 8px 15px;
+  max-width: 75%;
+  border-radius: 20px;
+  position: relative;
+  display: inline-block;
+  word-wrap: break-word;
 }
 
+/* USER (Right-Side Messages) */
 .user-message {
-  background-color: var(--main-colour);
-  color: #fff;
-  border-radius: 8px 8px 0 8px;
-  float: right;
+  background: linear-gradient(to bottom, #00d0ea 0%, #0085d1 100%);
+  color: white;
+  align-self: flex-end; /* Moves to the right */
 }
 
+/* CHATBOT (Left-Side Messages) */
 .chatbot-message {
-  background-color: var(--secondary-colour);
-  border-radius: 8px 8px 8px 0;
-  float: left;
+  background-color: #eee;
+  color: black;
+  align-self: flex-start; /* Moves to the left */
+}
+
+/* Fix tails for the last message */
+
+.user-message.last::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: -8px;
+  height: 20px;
+  width: 20px;
+  background: linear-gradient(to bottom, #00d0ea 0%, #0085d1 100%);
+  border-bottom-left-radius: 20px;
+}
+
+.user-message.last::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: -10px;
+  width: 10px;
+  height: 20px;
+  background: var(--user-tail-color); /* Dynamically changes based on theme */
+  border-bottom-left-radius: 10px;
+}
+
+.chatbot-message.last::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -7px;
+  height: 20px;
+  width: 20px;
+  background: #eee;
+  border-bottom-right-radius: 15px;
+}
+
+.chatbot-message.last::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -10px;
+  width: 10px;
+  height: 20px;
+  background: var(
+    --chatbot-tail-color
+  ); /* Dynamically changes based on theme */
+  border-bottom-right-radius: 10px;
+}
+
+/* 🔹 Dark Mode Toggle Button */
+.dark-mode-toggle {
+  font-size: 22px; /* Make the emoji larger */
+  cursor: pointer; /* Show hand cursor on hover */
+  background: none; /* Remove button background */
+  border: none; /* Remove button border */
+  outline: none; /* Remove outline */
+  color: #1e1e1e;
+  transition: color 0.3s ease-in-out;
 }
